@@ -1,46 +1,35 @@
-// import { useState } from "react";
-// import reactLogo from "./assets/react.svg";
-// import viteLogo from "/vite.svg";
+import Directory from "./components/directory/directory.component";
 
 function App() {
 	// const [count, setCount] = useState(0);
 	const categories = [
 		{
-			title: "Hats",
 			id: 1,
+			title: "hats",
+			imageUrl: "https://i.ibb.co/cvpntL1/hats.png",
 		},
 		{
-			title: "Jackets",
 			id: 2,
+			title: "jackets",
+			imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
 		},
 		{
-			title: "Sneakers",
 			id: 3,
+			title: "sneakers",
+			imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
 		},
 		{
-			title: "Men",
 			id: 4,
+			title: "womens",
+			imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
 		},
 		{
-			title: "Women",
 			id: 5,
+			title: "mens",
+			imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
 		},
 	];
-	return (
-		<>
-			<div className="categories-container">
-				{categories.map(({ title }) => (
-					<div className="category-container" key={categories.id}>
-						{/* { <img /> } */}
-						<div className="category-body-container">
-							<h2>{title}</h2>
-							<p>Shop Now</p>
-						</div>
-					</div>
-				))}
-			</div>
-		</>
-	);
+	return <Directory categories={categories} />;
 }
 
 export default App;
