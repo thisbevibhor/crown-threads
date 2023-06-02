@@ -1,21 +1,17 @@
+import SignUpForm from "../../components/sign-up-form/sign-up-form-component";
 import { signInWithGooglePopup, createUserDocumentFromAuth } from "../../utils/firebase/utils.firebase";
-import Button from "@mui/material/Button";
 
-// Component for the Sign In page
 const SignIn = () => {
-	// Function to handle sign in with Google
 	const logGoogleUser = async () => {
-		// Call the signInWithGooglePopup function from Firebase
 		const { user } = await signInWithGooglePopup();
-		const userdocref = await createUserDocumentFromAuth(user); // Log the response from the sign-in process
+		const userDocRef = await createUserDocumentFromAuth(user);
 	};
 
 	return (
 		<>
 			<h1>Sign In Page</h1>
-			<Button onClick={logGoogleUser} variant="contained" color="error">
-				Sign In with Google
-			</Button>
+			<button onClick={logGoogleUser}>Sign In with Google Popup</button>
+			<SignUpForm />
 		</>
 	);
 };
