@@ -55,17 +55,26 @@ const SignUpForm = () => {
 					value={displayName}
 				/>
 				<FormInput label="Email" type="text" required onChange={handleChange} name="email" value={email} />
-				<FormInput label="Passsword" type="text" required onChange={handleChange} name="password" value={password} />
 				<FormInput
-					label="Confirm Password"
-					type="text"
+					label="Passsword"
+					type="password"
 					required
 					onChange={handleChange}
-					name="confirmPasword"
+					name="password"
+					value={password}
+				/>
+				<FormInput
+					label="Confirm Password"
+					type="password"
+					required
+					onChange={handleChange}
+					name="confirmPassword"
 					value={confirmPassword}
 				/>
 
-				<Button type="submit">Sign Up</Button>
+				<div style={{ display: "flex", justifyContent: "center" }}>
+					<Button type="submit">Sign Up</Button>
+				</div>
 			</form>
 		</div>
 	);
